@@ -1,4 +1,4 @@
-const Passenger = require("../models/Passenger");
+const Passenger = require("../database/models/Passanger.js");
 
 module.exports = {
   async findAll(req, res) {

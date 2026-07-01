@@ -2,7 +2,7 @@ const { Sequelize } = require("sequelize");
 
 const databaseConfig = require("../config/database");
 
-const Passenger = require("../models/Passenger");
+const Passenger = require("./models/Passanger.js");
 
 const models = [Passenger];
 

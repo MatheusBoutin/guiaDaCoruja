@@ -1,9 +1,9 @@
 const express = require("express");
-const passenger = require("./passengerRoutes");
+const passengerRoutes = require("./passengerRoutes");
 
 module.exports = (app) => {
   app.use(
     express.json(),
-    passenger
+    passengerRoutes
   );
 };

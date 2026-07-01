@@ -1,6 +1,6 @@
 require("dotenv").config();
 
-require("./database");
+require("./src/database");
 
 const app = require("./app.js");
 
