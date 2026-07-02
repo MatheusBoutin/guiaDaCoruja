@@ -18,6 +18,13 @@ class Passenger extends Model {
       }
     );
   }
+
+  static associate(models) {
+    this.belongsTo(models.Trip, {
+      foreignKey: "trip_id",
+      as: "trip",
+    });
+  }
 }
 
 module.exports = Passenger;
