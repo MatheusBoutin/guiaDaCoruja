@@ -4,8 +4,9 @@ const databaseConfig = require("../config/database");
 
 const Passenger = require("./models/Passanger.js");
 const Trip = require("./models/Trips.js");
+const Payment = require("./models/Payments.js");
 
-const models = [Passenger, Trip];
+const models = [Passenger, Trip, Payment];
 
 class Database {
   constructor() {
