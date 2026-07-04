@@ -1,4 +1,5 @@
 const Trip = require("../database/models/Trips.js");
+const TripSummaryService = require("../services/TripSummaryService");
 
 module.exports = {
   async findAll(req, res) {
@@ -10,15 +11,15 @@ module.exports = {
   async findOne(req, res) {
     const { id } = req.params;
 
-    const trip = await Trip.findByPk(id);
+    const tripSummary = await TripSummaryService.execute(id);
 
-    if (!trip) {
+    if (!tripSummary) {
       return res.status(404).json({
         message: "Excursão não encontrada.",
       });
     }
 
-    return res.json(trip);
+    return res.json(tripSummary);
   },
 
   async create(req, res) {
